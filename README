@@ -1,0 +1,78 @@
+# Student Management System (Java + MySQL)
+
+A simple **console-based Student Management System** developed using **Java** and **MySQL**.  
+This project demonstrates basic **CRUD operations**, **JDBC connectivity**, and **Object-Oriented Programming (OOP)** concepts.
+
+## 📂 Project Structure
+
+StudentManagementSystem/
+│
+├── Main.java
+├── Student.java
+├── StudentDAO.java
+├── DBConnection.java
+├── database.sql
+├── mysql-connector-j-9.6.0.jar
+└── README.md
+
+
+## ⚙️ Database Setup
+
+1. Start **MySQL** using XAMPP
+2. Open **[localhost/phpMyAdmin](http://localhost/phpmyadmin/)**
+3. Create database:
+   ```sql
+   CREATE DATABASE student_db;
+
+## Select student_db and create table:
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50),
+    roll INT UNIQUE
+);
+
+## Database Configuration
+
+Update credentials in DBConnection.java if required:
+
+DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/student_db",
+    "root",
+    "YOUR_PASSWORD"        //agar tera php my admin open huaa to pasword mat rakh)
+);
+
+## How to Run the Projec --->tere terminal mai past kar one by one
+Step 1: Open Project Folder main.java
+
+cd StudentManagementSystem
+
+Step 2: Compile the Code
+
+javac -cp .;mysql-connector-j-9.6.0.jar *.java
+
+Step 3: Run the Program
+
+java -cp .;mysql-connector-j-9.6.0.jar Main
+
+
+
+
+## 📌 Features
+
+- Add new student
+- View all students
+- Delete student by roll number
+- MySQL database integration using JDBC
+- Console-based menu-driven application
+
+## 🛠️ Technologies Used
+
+- Java (Core Java)
+- MySQL
+- JDBC (MySQL Connector/J)
+- VS Code
+- XAMPP (MySQL Server)
+
+---
